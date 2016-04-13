@@ -13,7 +13,7 @@ Vagrant.configure(VAGRANT_API_VERSION) do |config|
   config.vm.network :forwarded_port, guest: 4200, host: 4200
   config.vm.synced_folder ".", "/home/vagrant/app"
   config.vm.provider :virtualbox do |vb|  
-    vb.name = "app"
+    vb.name = "ember-vm"
     vb.memory = "1536"
   end
   config.vm.provision "shell", path: "provisioning/provision.sh"
